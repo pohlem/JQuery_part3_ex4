@@ -5,15 +5,16 @@
   <script src="assets/JQuery/jquery-3.2.1.js"></script>
   <title>Exercice 4</title>
 </head>
-<body>
+<body style="background-color: grey;">
   <h1>Exercice 4</h1>
     <input type="button" name="button" id="height" value="Augmente taille"></input>
     <input type="button" name="button" id="color" value="Change la couleur"></input>
     <input type="button" name="button" id="resetColor" value="Remet couleur de base"></input>
     <input type="button" name="button" id="show" value="Apparaît"></input>
     <input type="button" name="button" id="hide" value="Disparaît"></input>
-  	<div id="rect" style="border : 1px solid black;"></div>
+  	<div id="rect" style="border : 1px solid black; background-color: white;"> </div>
   <script>
+    $(function(){
    $('#height').click(function(){
     if($('#rect').height()>100){
       $('#rect').height(10);
@@ -22,9 +23,10 @@
     }
    });
    $('#color').click(function(){$('#rect').css('background-color','green');});
-   $('#resetColor').click(function(){$('#rect').css('background-color','initial');});
+   $('#resetColor').click(function(){$('#rect').css('background-color','white');});
    $('#show').click(function(){$('#rect').show();});
    $('#hide').click(function(){$('#rect').hide();});
+ });
 </script>
 </body>
 </html>
